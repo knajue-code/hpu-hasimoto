@@ -1,0 +1,4 @@
+# The ready-to-publish static website is committed in dist.
+[build]
+  publish = "dist"
+  command = ""
