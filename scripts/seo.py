@@ -3,7 +3,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 BASE = 'https://hpu-hashimoto.de'
 PAGES = {
 '/': ('HPU & Hashimoto Mentoring mit Rieke Knappich', 'Persönliche Begleitung bei HPU und Hashimoto: Entdecke das Mentoring mit Rieke Knappich, verständliches Wissen und praktische Hilfen für deinen Alltag.'),
-'/hpu-hashimoto-code/': ('HPU & Hashimoto Mentoring – 8 Wochen mit Rieke Knappich', 'Persönliches HPU & Hashimoto Mentoring: 8 Wochen mit zwei 1:1-Terminen à 90 Minuten, acht Videomodulen, Checklisten und Trackern. Jetzt informieren.'),
+'/hpu-hashimoto-mentoring/': ('HPU & Hashimoto Mentoring – 8 Wochen mit Rieke Knappich', 'Persönliches HPU & Hashimoto Mentoring: 8 Wochen mit zwei 1:1-Terminen à 90 Minuten, acht Videomodulen, Checklisten und Trackern. Jetzt informieren.'),
 '/hpu-hashimoto-starter-guide/': ('Kostenloser HPU & Hashimoto Starter Guide', 'Dein Einstieg ins Thema HPU und Hashimoto: Fordere den kostenlosen Starter Guide an und erhalte verständliche Informationen für deine ersten Schritte.'),
 '/ueber-mich/': ('Über Rieke Knappich | HPU & Hashimoto Mentoring', 'Lerne Rieke Knappich kennen: ihre persönlichen Erfahrungen mit HPU und Hashimoto und ihren Ansatz für die Begleitung im Mentoring.'),
 '/rabatte/': ('Partner-Rabatte | HPU & Hashimoto', 'Entdecke ausgewählte Partner-Shops und Rabattcodes von Rieke Knappich. Alle Angebote und Links findest du hier im Überblick.'),

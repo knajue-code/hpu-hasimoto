@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from balance_copy import corrected
 
 ROUTES = {
-    '/balance-code-2026-fullversion': '/hpu-hashimoto-code',
+    '/balance-code-2026-fullversion': '/hpu-hashimoto-mentoring',
     '/balancecode-checkout-full-version': '/hpu-hashimoto-code-checkout',
 }
 

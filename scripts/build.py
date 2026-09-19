@@ -133,5 +133,14 @@ for page in (ROOT/'source/extra-pages').glob('*.html'):
  target.parent.mkdir(parents=True,exist_ok=True)
  target.write_text(page.read_text())
 
+# Keep the previously published mentoring URL working after the rename.
+old_mentoring = DIST/'hpu-hashimoto-code/index.html'
+old_mentoring.parent.mkdir(parents=True, exist_ok=True)
+old_mentoring.write_text('<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url=/hpu-hashimoto-mentoring/"><link rel="canonical" href="https://hpu-hashimoto.de/hpu-hashimoto-mentoring/"><title>Weiter zum Mentoring</title></head><body><a href="/hpu-hashimoto-mentoring/">Zum Mentoring</a></body></html>')
+(DIST/'_redirects').write_text('/hpu-hashimoto-code /hpu-hashimoto-mentoring/ 301!\n/hpu-hashimoto-code/ /hpu-hashimoto-mentoring/ 301!\n/balance-code-2026-fullversion /hpu-hashimoto-mentoring/ 301!\n/balance-code-2026-fullversion/ /hpu-hashimoto-mentoring/ 301!\n')
+
 from seo import apply_seo
 apply_seo(DIST)
+
+# Custom not-found page for Netlify.
+(DIST/"404.html").write_text((ROOT/"source/legal/404.html").read_text())

@@ -46,7 +46,7 @@ def fragment(html):
     return BeautifulSoup(html, 'html.parser').find()
 
 def add_mentoring(s, route):
-    for link in s.select('#navigation a[href="/hpu-hashimoto-code"]'):
+    for link in s.select('#navigation a[href="/hpu-hashimoto-mentoring"]'):
         link.string = 'Mentoring'
     if route == '/':
         section = s.select_one('.section-2')
