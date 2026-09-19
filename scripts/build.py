@@ -126,3 +126,9 @@ for tag in ['hpu','HPU','Symptome']:
   article=ROOT/'source'/((link['href'].strip('/').replace('/','__'))+'.html') if link else None
   if not article or not article.exists() or ('/wissen/tag/'+tag).lower() not in [a.get('href','').lower() for a in BeautifulSoup(article.read_text(),'html.parser').select('.blog-item-tag')]:card.decompose()
  target=DIST/'wissen/tag'/tag/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(str(listing))
+
+# Standalone tool destination pages intentionally have no navigation entries.
+for page in (ROOT/'source/extra-pages').glob('*.html'):
+ target=DIST/page.stem/'index.html'
+ target.parent.mkdir(parents=True,exist_ok=True)
+ target.write_text(page.read_text())
