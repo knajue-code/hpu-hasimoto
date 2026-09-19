@@ -1,0 +1,106 @@
+.page-balance-code-2026-fullversion .section.bc-curriculum {padding-bottom:32px}
+.page-balance-code-2026-fullversion .section.section-6 {padding-top:28px}
+.page-balance-code-2026-fullversion .section-6 h3 {margin-top:0}
+.page-balance-code-2026-fullversion .section-12 .copy {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+.page-balance-code-2026-fullversion .section-12 .text-block:first-child,
+.page-balance-code-2026-fullversion .section-12 .action {grid-column:1 / -1}
+.page-balance-code-2026-fullversion .section-12 .text-block:first-child h2 {margin:0;max-width:820px}
+.page-balance-code-2026-fullversion .section-12 .text-block:nth-child(2),
+.page-balance-code-2026-fullversion .section-12 .text-block:nth-child(3) {
+  background:white;
+  border:1px solid #dec6c1;
+  border-radius:10px;
+  padding:28px;
+  margin:0;
+}
+.page-balance-code-2026-fullversion .section-12 h4 {font-size:25px;margin-bottom:20px}
+.page-balance-code-2026-fullversion .section-12 ul {margin-bottom:0}
+.page-balance-code-2026-fullversion .section-12 li {margin:0 0 12px}
+.page-balance-code-2026-fullversion .section-12 li p {margin:0}
+.page-balance-code-2026-fullversion .section-12 .action {margin:2px 0 0;text-align:center}
+.page-balance-code-2026-fullversion .section-13 .copy {max-width:960px}
+.page-balance-code-2026-fullversion .section-13 ol {padding-left:26px;margin-bottom:0}
+.page-balance-code-2026-fullversion .section-13 li {
+  border-bottom:1px solid var(--line);
+  margin:0;
+  padding:17px 0 17px 8px;
+}
+.page-balance-code-2026-fullversion .section-13 li:first-child {padding-top:0}
+.page-balance-code-2026-fullversion .section-13 li:last-child {border-bottom:0;padding-bottom:0}
+.page-balance-code-2026-fullversion .section-13 li p {margin:0}
+.page-balance-code-2026-fullversion .section-13 li strong {color:var(--wine)}
+.page-balance-code-2026-fullversion .section-14 .copy {max-width:740px;text-align:center}
+.page-balance-code-2026-fullversion .section-14 h3 {font-size:clamp(2rem,3vw,2.8rem);margin:0 0 22px}
+.page-balance-code-2026-fullversion .section-14 p {margin:0 0 10px}
+.page-balance-code-2026-fullversion .section-14 .action {margin-top:26px}
+.page-balance-code-2026-fullversion .section-11 .section-inner {align-items:start}
+.page-balance-code-2026-fullversion .section-11 .visuals img {max-height:480px;object-fit:contain}
+/* Fill the text column height with individually framed original photographs. */
+.page-balance-code-2026-fullversion .with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .section-inner {
+  grid-template-columns:1.2fr 1fr;
+  align-items:stretch;
+  gap:40px;
+}
+.page-balance-code-2026-fullversion .with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals {
+  position:relative;
+  min-height:400px;
+  overflow:hidden;
+  border-radius:12px;
+}
+.page-balance-code-2026-fullversion .with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  max-height:none;
+  object-fit:cover;
+  border-radius:0;
+}
+.page-balance-code-2026-fullversion .section-1 .visuals img {object-position:65% center}
+.page-balance-code-2026-fullversion .section-3 .visuals img,
+.page-balance-code-2026-fullversion .section-7 .visuals img {object-position:39% center}
+.page-balance-code-2026-fullversion .section-4 .visuals img {object-position:70% center}
+.page-balance-code-2026-fullversion .section-10.with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .section-inner {grid-template-columns:1.55fr 1fr}
+.page-balance-code-2026-fullversion .section-10.with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals {
+  align-self:start;
+  min-height:0;
+  aspect-ratio:4/5;
+}
+.page-balance-code-2026-fullversion .section-10 .visuals img {object-position:center 22%;transform:scale(1.12);transform-origin:center 22%}
+@media(min-width:761px) {
+  .page-balance-code-2026-fullversion .section-10.with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .section-inner {row-gap:0}
+  .page-balance-code-2026-fullversion .section-10 .copy,
+  .page-balance-code-2026-fullversion .section-10 .text-block,
+  .page-balance-code-2026-fullversion .section-10 .text-block > div {display:contents}
+  .page-balance-code-2026-fullversion .section-10 .text-block h3,
+  .page-balance-code-2026-fullversion .section-10 .text-block p {grid-column:1}
+  .page-balance-code-2026-fullversion .section-10 .text-block p:nth-of-type(n+3) {grid-column:1 / -1}
+  .page-balance-code-2026-fullversion .section-10 .visuals {grid-column:2;grid-row:1 / 4}
+}
+.page-balance-code-2026-fullversion .section-11 .visuals {background:#f4e6e3}
+.page-balance-code-2026-fullversion .section-11 .visuals img {object-position:center top}
+.page-balance-code-2026-fullversion .section-14 .visuals img {object-position:48% center}
+.page-balance-code-2026-fullversion .bc-module-intro {grid-template-columns:1.2fr 1fr;gap:40px}
+.page-balance-code-2026-fullversion .bc-module-intro .visuals img,
+.page-balance-code-2026-fullversion .bc-offer .visuals img {
+  width:100%;height:auto;max-height:none;aspect-ratio:1;object-fit:contain;border-radius:12px;
+}
+.page-balance-code-2026-fullversion .bc-offer .visuals {padding:0;background:transparent}
+@media(max-width:760px) {
+  .page-balance-code-2026-fullversion .with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals {
+    position:relative!important;min-height:0;aspect-ratio:4/3;
+  }
+  .page-balance-code-2026-fullversion .section-10.with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals,
+  .page-balance-code-2026-fullversion .section-11.with-images:not(.bc-hero):not(.bc-curriculum):not(.bc-offer) .visuals {aspect-ratio:4/5}
+  .page-balance-code-2026-fullversion .bc-module-intro {grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:760px) {
+  .page-balance-code-2026-fullversion .section-12 .copy {grid-template-columns:1fr;gap:18px}
+  .page-balance-code-2026-fullversion .section-12 .text-block:nth-child(2),
+  .page-balance-code-2026-fullversion .section-12 .text-block:nth-child(3) {padding:23px}
+  .page-balance-code-2026-fullversion .section-12 h4 {font-size:23px}
+}
