@@ -132,3 +132,6 @@ for page in (ROOT/'source/extra-pages').glob('*.html'):
  target=DIST/page.stem/'index.html'
  target.parent.mkdir(parents=True,exist_ok=True)
  target.write_text(page.read_text())
+
+from seo import apply_seo
+apply_seo(DIST)
