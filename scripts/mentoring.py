@@ -12,9 +12,9 @@ REPLACEMENTS = {
     'Mit meinem klar aufgebauten 8-Wochen-Programm, mit dem du die Zusammenhänge in deinem Körper verstehst, Struktur in deine nächsten Schritte bringst und dir einen alltagstauglichen Werkzeugkasten aufbaust – ohne Druck, dafür mit System.':
         'In meinem 8-Wochen-Mentoring verbindest du persönliche 1:1-Begleitung mit Selbstlern-Tools: Zwei Mentoring-Sessions à 90 Minuten, Videos, ein Workbook, Checklisten und Tracker helfen dir, Wissen in deinen Alltag zu bringen – in deinem Tempo und mit klaren nächsten Schritten.',
     'Aktuell ist das HPU und Hashimoto Mentoring ein Selbstlernprogramm . Du kannst sofort loslegen und in deinem Tempo arbeiten.':
-        'Ja. Du bekommst zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit mir, Rieke. Gemeinsam besprechen wir deine Fragen und nächsten Schritte. Ergänzend arbeitest du mit den Videos und Selbstlern-Tools in deinem eigenen Tempo.',
+        'Ja. Du bekommst zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit mir. Gemeinsam besprechen wir deine Fragen und nächsten Schritte. Ergänzend arbeitest du mit den Videos und Selbstlern-Tools in deinem eigenen Tempo.',
     'Aktuell ist es ein Selbstlernprogramm. Ein Gruppenmentoring ist zukünftig geplant und kann dann hinzugebucht werden.':
-        'Ja. Zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit Rieke sind im Gesamtpreis enthalten. Der gemeinsame Wert der beiden Sessions beträgt 450 €. Die Videos, Checklisten und Tracker nutzt du ergänzend in deinem eigenen Tempo.',
+        'Ja. Zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit mir sind im Gesamtpreis enthalten. Der gemeinsame Wert der beiden Sessions beträgt 450 €. Die Videos, Checklisten und Tracker nutzt du ergänzend in deinem eigenen Tempo.',
     'Plane lieber klein und realistisch. Du bekommst Tools und Tracker, um die Umsetzung in deinen Alltag einzubauen. Die meisten Videos dauern 20–30 Minuten.':
         'Plane lieber klein und realistisch. Die meisten Videos dauern 20–30 Minuten. Tools und Tracker helfen dir bei der Umsetzung im Alltag. Plane zusätzlich Zeit für deine zwei persönlichen Mentoring-Sessions à 90 Minuten ein.',
     'Genau dahin führt dich der ': 'Genau dahin führt dich das ',
@@ -31,7 +31,7 @@ def mentoring_text(text):
         text = text.replace(old, new)
     text = text.replace('HPU und Hashimoto Mentoring', 'HPU & Hashimoto Mentoring')
     text = text.replace('Dann ist  das HPU & Hashimoto Mentoring - das 8-Wochen-Mentoring bei HPU & Hashimoto - dein Weg zu mehr Energie, Stabilität und Leichtigkeit genau das Richtige für dich:', 'Das HPU & Hashimoto Mentoring verbindet persönliche Begleitung mit einem Selbstlernkurs über acht Wochen – für mehr Orientierung, Struktur und alltagstaugliche nächste Schritte.')
-    text = text.replace('Ein 8-Wochen-Mentoring mit zwei persönlichen 1:1-Sessions à 90 Minuten und ergänzenden Selbstlern-Tools, in dem du Kompass und Karte erhältst, um aus dem HPU & Hashimoto Dschungel zu finden.', 'Du bekommst zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit Rieke. Ergänzend unterstützt dich der Selbstlernkurs mit acht Videomodulen, Workbook, Checklisten und Trackern dabei, das Wissen in deinem eigenen Tempo umzusetzen.')
+    text = text.replace('Ein 8-Wochen-Mentoring mit zwei persönlichen 1:1-Sessions à 90 Minuten und ergänzenden Selbstlern-Tools, in dem du Kompass und Karte erhältst, um aus dem HPU & Hashimoto Dschungel zu finden.', 'Du bekommst zwei persönliche 1:1-Mentoring-Sessions à 90 Minuten mit mir. Ergänzend unterstützt dich der Selbstlernkurs mit acht Videomodulen, Workbook, Checklisten und Trackern dabei, das Wissen in deinem eigenen Tempo umzusetzen.')
     return re.sub(r'\b497(?=[\s\u00a0]*€)', '997', text)
 
 def prepare_mentoring(s):
@@ -71,9 +71,9 @@ def add_mentoring(s, route):
     if route != '/balance-code-2026-fullversion':
         return
     benefits = s.select_one('.section-4 .text-block p:nth-of-type(2)')
-    benefits.insert_after(fragment('<p data-mentoring-addition="true">✅ <strong>persönliches 1:1-Mentoring mit Rieke</strong>: zwei Sessions à 90 Minuten im gemeinsamen Wert von 450 € – für deine Fragen und deine nächsten Schritte</p>'))
+    benefits.insert_after(fragment('<p data-mentoring-addition="true">✅ <strong>persönliches 1:1-Mentoring mit mir</strong>: zwei Sessions à 90 Minuten im gemeinsamen Wert von 450 € – für deine Fragen und deine nächsten Schritte</p>'))
     intro = s.select_one('.bc-module-intro-copy')
-    intro.append(fragment('''<div class="mentoring-session-card" data-mentoring-addition="true"><span class="mentoring-kicker">Persönlich begleitet</span><h3>Dein 1:1-Mentoring mit Rieke</h3><p><strong>2 × 90 Minuten · Wert insgesamt 450 €</strong></p><p>In zwei persönlichen Einzelterminen besprechen wir deine Fragen und entwickeln klare nächste Schritte für deinen Alltag. Die acht Videomodule, das Workbook, Checklisten und Tracker ergänzen unsere Gespräche als Selbstlern-Tools.</p></div>'''))
+    intro.append(fragment('''<div class="mentoring-session-card" data-mentoring-addition="true"><span class="mentoring-kicker">Persönlich begleitet</span><h3>Dein 1:1-Mentoring mit mir</h3><p><strong>2 × 90 Minuten · Wert insgesamt 450 €</strong></p><p>In zwei persönlichen Einzelterminen besprechen wir deine Fragen und entwickeln klare nächste Schritte für deinen Alltag. Die acht Videomodule, das Workbook, Checklisten und Tracker ergänzen unsere Gespräche als Selbstlern-Tools.</p></div>'''))
     module_heading = s.new_tag('div', attrs={'class': 'mentoring-modules-heading'})
     for paragraph in list(intro.find_all('p', recursive=False)):
         module_heading.append(paragraph.extract())
@@ -83,7 +83,7 @@ def add_mentoring(s, route):
         module_heading.insert(0, title.extract())
     s.select_one('.bc-module-grid').insert_before(module_heading)
     offer = s.select_one('.bc-offer ul')
-    offer.insert(0, fragment('<li data-mentoring-addition="true"><p><strong>2 persönliche 1:1-Mentoring-Sessions à 90 Minuten mit Rieke</strong><br>Gemeinsamer Wert: 450 € · im Gesamtpreis enthalten</p></li>'))
+    offer.insert(0, fragment('<li data-mentoring-addition="true"><p><strong>2 persönliche 1:1-Mentoring-Sessions à 90 Minuten mit mir</strong><br>Gemeinsamer Wert: 450 € · im Gesamtpreis enthalten</p></li>'))
     s.select_one('.bc-offer h2').insert_after(fragment('<p class="mentoring-offer-summary" data-mentoring-addition="true">Persönliche Begleitung und Selbstlern-Tools in einem Angebot.</p>'))
     for button in s.select('a.button'):
         if button.get('href', '').rstrip('/') == '/hpu-hashimoto-code-checkout':

@@ -51,7 +51,7 @@ def site_text(text):
     return text
 
 def product(s):
-    return BeautifulSoup('''<img class="mentoring-mockup" src="/assets/mentoring-mockup.png" width="1080" height="1080" loading="lazy" decoding="async" alt="Selbstlernmaterialien zum HPU und Hashimoto Mentoring: acht Videomodule, Workbook, Tracker, Checklisten und Boni">''', 'html.parser').img
+    return BeautifulSoup('''<img class="mentoring-mockup" src="/assets/mentoring-mockup-v2.png" width="1080" height="1080" loading="lazy" decoding="async" alt="Selbstlernmaterialien zum HPU und Hashimoto Mentoring: acht Videomodule, Workbook, Tracker, Checklisten und Boni">''', 'html.parser').img
 
 def refine_site(s, route):
     s.head.append(s.new_tag('link', rel='stylesheet', href='/site-design.css?v=4'))
