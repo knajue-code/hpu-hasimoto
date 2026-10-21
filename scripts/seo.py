@@ -10,7 +10,7 @@ PAGES = {
 '/wissen/': ('Wissen zu HPU & Hashimoto | Rieke Knappich', 'Artikel von Rieke Knappich zu HPU und Hashimoto: Informationen über Symptome, Mikronährstoffe und persönliche Begleitung im Alltag.'),
 '/wissen/hpu-symptome/': ('HPU: Symptome und Zusammenhänge | Rieke Knappich', 'Welche Beschwerden werden mit HPU in Verbindung gebracht? Erfahre mehr über mögliche Symptome und Zusammenhänge in diesem Wissensartikel.'),
 '/wissen/begleitung/': ('Persönliche Begleitung bei HPU | Rieke Knappich', 'Warum kann persönliche Begleitung bei HPU hilfreich sein? Ein Wissensartikel über Orientierung, individuelle Schritte und Unterstützung im Alltag.'),
-'/wissen/nahrungsergaenzungsmittel/': ('Mikronährstoffe bei HPU: Orientierung | Rieke Knappich', 'Orientierung zum Thema Mikronährstoffe bei HPU: Erfahre mehr über Nahrungsergänzungsmittel und die Bedeutung einer individuell abgestimmten Vorgehensweise.'),
+'/wissen/nahrungsergaenzungsmittel/': ('Mikronährstoffe bei HPU: Orientierung | Rieke Knappich', 'Mikronährstoffe bei HPU: Erfahre mehr über Nahrungsergänzungsmittel und warum eine individuell abgestimmte Vorgehensweise wichtig ist.'),
 '/datenschutz/': ('Datenschutzerklärung | HPU & Hashimoto', 'Informationen zum Datenschutz bei HPU & Hashimoto: Website, Newsletter, GetResponse, Bestellabwicklung und deine Rechte.'),
 '/impressum/': ('Impressum | HPU & Hashimoto', 'Anbieterkennzeichnung und Kontaktdaten von Ulrike Knappich für die Website HPU & Hashimoto.'),
 '/disclaimer/': ('Medizinischer Hinweis | HPU & Hashimoto', 'Hinweise zu den Grenzen der Informationen und Angebote von HPU & Hashimoto. Die Inhalte ersetzen keine medizinische Beratung oder Behandlung.')
@@ -22,6 +22,7 @@ def apply_seo(dist):
         if not s.head or not s.main:continue
         route='/' + str(path.parent.relative_to(dist)).strip('.') .strip('/') + '/'
         if route=='//':route='/'
+        if route.startswith('/wissen/tag/'):route=route.lower()
         indexable=route in PAGES and route not in ['/datenschutz/','/impressum/','/disclaimer/']
         def meta(key,value,attr='name'):
             for old in s.head.find_all('meta',attrs={attr:key}):old.decompose()

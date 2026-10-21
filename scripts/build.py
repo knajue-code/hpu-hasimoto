@@ -144,3 +144,10 @@ apply_seo(DIST)
 
 # Custom not-found page for Netlify.
 (DIST/"404.html").write_text((ROOT/"source/legal/404.html").read_text())
+
+from normalize_links import normalize_links
+normalize_links(DIST)
+from optimize_images import optimize_images
+optimize_images(DIST)
+from refine_headings import refine_headings
+refine_headings(DIST)
